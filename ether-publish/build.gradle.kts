@@ -1,16 +1,9 @@
 plugins {
+    signing
     id("maven-publish")
 }
 
 publishing {
-    publications {
-        create<MavenPublication>("maven") {
-            groupId = "$group"
-            artifactId = rootProject.name.toLowerCase()
-            from(components["java"])
-        }
-    }
-
     repositories {
         maven {
             url = uri("https://repo.repsy.io/mvn/lone64/everything")
@@ -20,4 +13,21 @@ publishing {
             }
         }
     }
+
+    publications {
+        fun MavenPublication.createPublication(project: Project) {
+            groupId = "$group"
+            artifactId = rootProject.name.toLowerCase()
+            from(components["java"])
+        }
+
+        create<MavenPublication>("api") {
+            createPublication(projectAPI)
+        }
+    }
+}
+
+signing {
+    isRequired = true
+    sign(publishing.publications["api"])
 }

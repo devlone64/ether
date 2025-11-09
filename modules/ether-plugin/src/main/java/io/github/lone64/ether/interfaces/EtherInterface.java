@@ -1,6 +1,6 @@
 package io.github.lone64.ether.interfaces;
 
-import io.github.lone64.ether.api.EtherAPI;
+import io.github.lone64.ether.api.EtherLib;
 import io.github.lone64.ether.api.command.AbstractCommand;
 import io.github.lone64.ether.api.config.AbstractConfig;
 import io.github.lone64.ether.api.gui.AbstractGui;
@@ -24,7 +24,7 @@ import java.util.logging.Logger;
 
 @Getter
 @SuppressWarnings("all")
-public class EtherInterface implements EtherAPI {
+public class EtherInterface implements EtherLib {
     private final Logger LOGGER = Logger.getLogger(getClass().getSimpleName());
 
     private final Map<String, PluginCommand> COMMANDS = new HashMap<>();

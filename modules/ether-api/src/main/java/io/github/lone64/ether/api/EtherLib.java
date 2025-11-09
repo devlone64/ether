@@ -14,7 +14,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Consumer;
 
-public interface EtherAPI {
+public interface EtherLib {
     void openGui(Player player, AbstractGui abstractGui);
 
     void registerConfig(AbstractConfig config);
@@ -26,8 +26,8 @@ public interface EtherAPI {
     ItemStack createItemStack(Material type, int amount, Consumer<ItemMeta> consumer);
     ItemStack createItemStack(ItemStack itemStack, Consumer<ItemMeta> consumer);
 
-    static @NotNull EtherAPI getInstance() {
-        final RegisteredServiceProvider<EtherAPI> serviceProvider = Bukkit.getServicesManager().getRegistration(EtherAPI.class);
+    static @NotNull EtherLib getInstance() {
+        final RegisteredServiceProvider<EtherLib> serviceProvider = Bukkit.getServicesManager().getRegistration(EtherLib.class);
         if (serviceProvider != null) return serviceProvider.getProvider();
         throw new IllegalStateException("No EtherLib found!");
     }
