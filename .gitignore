@@ -1,0 +1,11 @@
+.idea/
+build/
+.gradle/
+
+buildSrc/build/
+buildSrc/.gradle/
+
+modules/ether-api/build/
+modules/ether-plugin/build/
+
+ether-publish/gradle.properties

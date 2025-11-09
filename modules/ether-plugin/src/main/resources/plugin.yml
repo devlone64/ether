@@ -1,0 +1,6 @@
+name: ${pluginName}
+main: io.github.lone64.ether.EtherPlugin
+author: lone64
+version: ${version}
+api-version: '1.20'
+description: Template plugin by lone64.
