@@ -4,4 +4,4 @@
 
 ### 사용 방법 (Usages)
 repository: `https://repo.repsy.io/mvn/lone64/everything`<br>
-package: `io.github.lone64:ether:VERSION`
+package: `io.github.lone64:ether-api:VERSION`
