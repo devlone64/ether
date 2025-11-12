@@ -24,7 +24,7 @@ public abstract class AbstractConfig implements Utils {
             this.name = config.name();
             this.path = config.path();
             this.type = config.type();
-            this.parent = new File(plugin.getDataFolder(), this.path + "/" + this.name + config.type().extension);
+            this.parent = new File(plugin.getDataFolder(), this.path + "/" + this.name + "." + config.type().extension);
         } else {
             throw new IllegalArgumentException("@Config annotation is required");
         }
